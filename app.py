@@ -4,9 +4,9 @@ import numpy as np
 from PIL import Image
 
 # 1. Setup the Web Page Profile
-st.set_page_config(page_title="Plant Disease Identifier", page_icon="🌿")
-st.title("🌿 Botanical Disease Diagnosis AI")
-st.write("Upload a picture of a plant leaf, and the AI will predict its health status based on visual symptoms.")
+st.set_page_config(page_title="Plant Disease Diagnosis via CNN", page_icon="🌿")
+st.title("🌿 Plant Disease Diagnosis via CNN")
+st.write("This Web App for the ML-AI Major Project titled \"Automated Plant Disease Diagnosis Using Convolutional Neural Networks on Leaf Images\" is a record of an original piece of work done by Nilanjan Bhattacharyya (Enrolment No: A992972400099(el)) for the partial fulfillment of the MCA program at Amity University Online.")
 
 # 2. Load the trained model (Cached so it doesn't reload every time you click a button)
 @st.cache_resource
@@ -33,7 +33,7 @@ CLASS_NAMES = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple_r
                ]
 
 # 4. Create the File Uploader
-file = st.file_uploader("Upload a leaf image (JPG/PNG)", type=["jpg", "jpeg", "png"])
+file = st.file_uploader("Upload a leaf image (JPG/PNG) and click 'Diagnose Leaf'", type=["jpg", "jpeg", "png"])
 
 if file is not None:
     # Display the uploaded image
